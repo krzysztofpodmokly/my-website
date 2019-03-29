@@ -64,6 +64,22 @@ body {
     animation-name: moveInUp;
     animation-duration: 1s; }
 
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  display: inline-block;
+  background-image: linear-gradient(to right, #2176FF, #35A7FF);
+  -webkit-background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem; }
+
+.center-text {
+  text-align: center; }
+
+.margin-bottom-big {
+  margin-bottom: 8rem; }
+
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
   text-transform: uppercase;
@@ -110,6 +126,21 @@ body {
   animation: fadeIn .7s ease-in .7s;
   animation-fill-mode: backwards; }
 
+.about {
+  width: 100%;
+  display: flex; }
+  .about__photo {
+    position: relative;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    border-radius: none;
+    overflow: hidden; }
+  .about__img {
+    width: 15rem;
+    border-radius: 50%; }
+
 .header {
   height: 90vh;
   background-image: linear-gradient(to right bottom, rgba(33, 118, 255, 0.6), rgba(53, 167, 255, 0.6)), url("../../img/photo-1.jpg");
@@ -122,3 +153,8 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center; }
+
+.section-about {
+  background-color: #f7f7f7;
+  padding: 10rem 0;
+  margin-top: -5rem; }
