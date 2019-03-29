@@ -1,0 +1,22 @@
+.header {
+    height: 90vh;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-dark, 0.6),
+        rgba($color-primary-light, 0.6)),
+        url("../../img/photo-1.jpg");
+    position: relative;
+
+
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
+
+    &__content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+}
