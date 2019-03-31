@@ -1,25 +1,17 @@
 .about {
-    width: 100%;
     display: flex;
+    justify-content: center;
+    
 
-    &__text {
+    &__shape {
 
     }
 
-    &__photo {
-        // position: relative;
-        // -webkit-clip-path: circle(50% at 50% 50%);
-        // clip-path: circle(50% at 50% 50%);
-        // -webkit-shape-outside: circle(50% at 50% 50%);
-        // shape-outside: circle(50% at 50% 50%);
-        // border-radius: none;
+    &__text {
         
     }
 
     &__img {
-        // height: 15rem;
-        width: 15rem;
-        border-radius: 50%;
-
+        height: 3rem;
     }
 }

@@ -8,8 +8,8 @@
     position: relative;
 
 
-    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
 
     &__content {
         position: absolute;
@@ -17,6 +17,107 @@
         left: 50%;
         transform: translate(-50%, -50%);
         text-align: center;
+        font-size: 3rem;
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $color-bright;
+    }
+
+    &__left {
+        display: inline-block;
+        animation-name: fadeInLeft;
+        animation-fill-mode: backwards;
+        animation-duration: 1.5s;
+        letter-spacing: 1rem;
+
+        &:nth-child(1) {
+            animation-delay: .1s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: .2s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: .3s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: .4s;
+        }
+
+        &:nth-child(5) {
+            animation-delay: .5s;
+        }
+
+        &:nth-child(6) {
+            animation-delay: .6s;
+        }
+
+        &:nth-child(7) {
+            animation-delay: .7s;
+        }
+
+        &:nth-child(8) {
+            animation-delay: .8s;
+        }
+
+        &:nth-child(9) {
+            animation-delay: .9s;
+        }
+    }
+
+    &__right {
+        display: inline-block;
+        animation-name: fadeInRight;
+        animation-fill-mode: backwards;
+        animation-duration: 1.6s;
+        letter-spacing: 1rem;
+
+        &:nth-child(11) {
+            animation-delay: .1s;
+        }
+
+        &:nth-child(12) {
+            animation-delay: .2s;
+        }
+
+        &:nth-child(13) {
+            animation-delay: .3s;
+        }
+
+        &:nth-child(14) {
+            animation-delay: .4s;
+        }
+
+        &:nth-child(15) {
+            animation-delay: .5s;
+        }
+
+        &:nth-child(16) {
+            animation-delay: .6s;
+        }
+
+        &:nth-child(17) {
+            animation-delay: .7s;
+        }
+
+        &:nth-child(18) {
+            animation-delay: .8s;
+        }
+
+        &:nth-child(19) {
+            animation-delay: .9s;
+        }
+    }
+
+    &__sub {
+        display: block;
+        animation: fadeIn 1s ease-in 2s;
+        animation-fill-mode: backwards;
+        font-weight: 300;
+        letter-spacing: 1.3rem;
+        margin-bottom: 4rem;
     }
 
 }

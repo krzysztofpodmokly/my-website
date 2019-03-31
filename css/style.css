@@ -9,7 +9,7 @@
 @keyframes moveInUp {
   0% {
     opacity: 0;
-    transform: translateY(5rem); }
+    transform: translateY(1rem); }
   100% {
     opacity: 1;
     transform: translateY(0); } }
@@ -19,6 +19,22 @@
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 
 *,
 *::before,
@@ -49,8 +65,13 @@ body {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 5rem; }
-  .heading-primary--main {
-    display: block;
+  .heading-primary--left {
+    font-size: 3rem;
+    font-weight: 400;
+    letter-spacing: .5rem;
+    animation-name: moveInDown;
+    animation-duration: 1s; }
+  .heading-primary--right {
     font-size: 3rem;
     font-weight: 400;
     letter-spacing: .5rem;
@@ -123,36 +144,86 @@ body {
     background-color: #fff; }
 
 .btn--animated {
-  animation: fadeIn .7s ease-in .7s;
+  animation: moveInUp .7s ease-in 3.5s;
   animation-fill-mode: backwards; }
 
 .about {
-  width: 100%;
-  display: flex; }
-  .about__photo {
-    position: relative;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-shape-outside: circle(50% at 50% 50%);
-    shape-outside: circle(50% at 50% 50%);
-    border-radius: none;
-    overflow: hidden; }
+  display: flex;
+  justify-content: center; }
   .about__img {
-    width: 15rem;
-    border-radius: 50%; }
+    height: 3rem; }
 
 .header {
   height: 90vh;
   background-image: linear-gradient(to right bottom, rgba(33, 118, 255, 0.6), rgba(53, 167, 255, 0.6)), url("../../img/photo-1.jpg");
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh); }
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh); }
   .header__content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center; }
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff; }
+  .header__left {
+    display: inline-block;
+    animation-name: fadeInLeft;
+    animation-fill-mode: backwards;
+    animation-duration: 1.5s;
+    letter-spacing: 1rem; }
+    .header__left:nth-child(1) {
+      animation-delay: .1s; }
+    .header__left:nth-child(2) {
+      animation-delay: .2s; }
+    .header__left:nth-child(3) {
+      animation-delay: .3s; }
+    .header__left:nth-child(4) {
+      animation-delay: .4s; }
+    .header__left:nth-child(5) {
+      animation-delay: .5s; }
+    .header__left:nth-child(6) {
+      animation-delay: .6s; }
+    .header__left:nth-child(7) {
+      animation-delay: .7s; }
+    .header__left:nth-child(8) {
+      animation-delay: .8s; }
+    .header__left:nth-child(9) {
+      animation-delay: .9s; }
+  .header__right {
+    display: inline-block;
+    animation-name: fadeInRight;
+    animation-fill-mode: backwards;
+    animation-duration: 1.6s;
+    letter-spacing: 1rem; }
+    .header__right:nth-child(11) {
+      animation-delay: .1s; }
+    .header__right:nth-child(12) {
+      animation-delay: .2s; }
+    .header__right:nth-child(13) {
+      animation-delay: .3s; }
+    .header__right:nth-child(14) {
+      animation-delay: .4s; }
+    .header__right:nth-child(15) {
+      animation-delay: .5s; }
+    .header__right:nth-child(16) {
+      animation-delay: .6s; }
+    .header__right:nth-child(17) {
+      animation-delay: .7s; }
+    .header__right:nth-child(18) {
+      animation-delay: .8s; }
+    .header__right:nth-child(19) {
+      animation-delay: .9s; }
+  .header__sub {
+    display: block;
+    animation: fadeIn 1s ease-in 2s;
+    animation-fill-mode: backwards;
+    font-weight: 300;
+    letter-spacing: 1.3rem;
+    margin-bottom: 4rem; }
 
 .section-about {
   background-color: #f7f7f7;

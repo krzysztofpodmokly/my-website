@@ -9,15 +9,22 @@ body {
     text-transform: uppercase;
     margin-bottom: 5rem;
 
-
-    &--main {
-        display: block;
+    &--left {
+        // display: block;
         font-size: 3rem;
         font-weight: 400;
         letter-spacing: .5rem;
         animation-name: moveInDown;
-        animation-duration: 1s;
-        
+        animation-duration: 1s; 
+    }
+
+    &--right {
+        // display: block;
+        font-size: 3rem;
+        font-weight: 400;
+        letter-spacing: .5rem;
+        animation-name: moveInDown;
+        animation-duration: 1s; 
     }
 
     &--sub {
@@ -39,4 +46,14 @@ body {
     -webkit-background-clip: text;
     color: transparent;
     letter-spacing: .2rem;
+}
+
+.letter {
+    &--left {
+
+    }
+
+    &--right {
+
+    }
 }

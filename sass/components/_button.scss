@@ -58,7 +58,7 @@
     }
 
     &--animated {
-        animation: fadeIn .7s ease-in .7s;
+        animation: moveInUp .7s ease-in 3.5s;
         animation-fill-mode: backwards;
     }
 }
