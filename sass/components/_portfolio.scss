@@ -1,9 +1,0 @@
-.bg-video {
-    height: 90vh;
-    opacity: 0.3;
-
-    -webkit-clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 75vh);
-    clip-path: polygon(0 0, 100% 15vh, 100% 100%, 0 75vh);
-
-    &__content {}
-}
