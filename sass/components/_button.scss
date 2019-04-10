@@ -61,4 +61,20 @@
         animation: moveInUp .7s ease-in 3.5s;
         animation-fill-mode: backwards;
     }
+
+    &-text {
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary-dark;
+        color: $color-primary-dark;
+        padding: .1rem .3rem;
+        transition: all .2s ease-out;
+        &:hover {
+            cursor: pointer;
+            color: $color-bright;
+            background-color: $color-primary-dark;
+            transform: translateY(-.3rem);
+        }
+
+    }
 }

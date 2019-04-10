@@ -1,0 +1,113 @@
+.portfolio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+    background-image: linear-gradient(to right bottom,
+        rgba($color-primary-dark, .5),
+        rgba($color-primary-light, .5)),
+        url('../../img/photo-2.jpg');
+    background-size: cover;
+
+    -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75vh);
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75vh);
+
+    &:hover .portfolio-preview__item:nth-child(1) {
+        transform: translateX(15rem) rotate(-40deg);
+    }
+
+    &:hover .portfolio-preview__item:nth-child(2) {
+        transform: translateX(-15rem) rotate(10deg);
+    }
+
+    &:hover .portfolio-preview__item:nth-child(3) {
+        transform: translate(15rem, 10rem) rotate(-20deg);
+    }
+
+    &:hover .portfolio-preview__item:nth-child(4) {
+        transform: translate(-15rem, 15rem) rotate(-5deg);
+    }
+
+    &:hover .portfolio-preview__item:nth-child(5) {
+        transform: translateY(-10rem) rotate(-5deg);
+    }
+
+}
+
+.portfolio-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__item {
+        position: absolute;
+        border-radius: 3px;
+        &:nth-child(1) {
+            background-image: url('../../img/photo-github-1.JPG');
+            background-size: cover;
+            width: 25rem;
+            height: 15rem;
+            transition: all .4s ease;
+        }
+    
+        &:nth-child(2) {
+            background-image: url('../../img/photo-github-2.JPG');
+            background-size: contain;
+            width: 25rem;
+            height: 15rem;
+            transition: all .4s ease .2s;
+        }
+    
+        &:nth-child(3) {
+            background-image: url('../../img/photo-github-3.JPG');
+            background-size: cover;
+            width: 25rem;
+            height: 15rem;
+            transition: all .4s ease .3s;
+        }
+    
+        &:nth-child(4) {
+            background-image: url('../../img/photo-1.jpg');
+            background-size: cover;
+            width: 20rem;
+            height: 20rem;
+            transition: all .4s ease .4s;
+        }
+    
+        &:nth-child(5) {
+            background-image: url('../../img/photo-2.jpg');
+            background-size: cover;
+            width: 20rem;
+            height: 20rem;
+            transition: all .4s ease .5s;
+        }
+    }
+    
+
+}
+
+.portfolio-box {
+    position: absolute;
+    background-color: rgba($color-bright, 1);
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-deep-dark, .15);
+    text-align: center;
+    width: 30rem;
+    cursor: pointer;
+    transition: transform .2s ease-out;
+
+    &__icon {
+        font-size: 5rem;
+        background-image: linear-gradient(to right,
+        $color-primary-dark,
+        $color-primary-light);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover {
+        transform: translateY(-.5rem);
+    }
+}

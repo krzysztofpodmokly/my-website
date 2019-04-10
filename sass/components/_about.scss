@@ -1,14 +1,15 @@
 .about {
     width: 85%;
+    padding: 6rem;
     box-shadow: 0 3rem 4rem rgba($color-deep-dark, .1);
     margin: 0 auto;
     transform: skewX(15deg);
+    transition: all .2s ease-out;
 
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
-        background-color: orange;
         position: relative;
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
@@ -16,21 +17,42 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
 
-        transform: translateX(-3rem);
+        transform: translateX(-2rem) skewX(-15deg);
     }
 
     &__text {
         font-size: 1.5rem;
-        transform: translateX(3rem);
+        transform: translateX(1rem) skewX(-15deg);
     }
 
     &__img {
         height: 100%;
         transform: translateX(.5rem) scale(1.1);
-        // backface-visibility: hidden;
+        transition: all .5s;
     }
 
-    & > * {
-        transform: skewX(-15deg);
+    &__caption {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 10%);
+        color: $color-bright;
+        text-transform: uppercase;
+        font-size: 1.7rem;
+        line-height: 2;
+        text-align: center;
+        opacity: 0;
+        transition: all .5s;
+
+    }
+
+    &:hover &__caption {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__img {
+        transform: translateX(.5rem) scale(1.05);
+        filter: blur(3px) brightness(70%) grayscale(20%);
     }
 }
