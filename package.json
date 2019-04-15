@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
+    "watch:main": "node-sass sass/main.scss css/style.css -w",
+    "watch:projects": "node-sass sass/projects.scss css/projects.css -w",
+    "watch:contact": "node-sass sass/contact.scss css/contact.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass"
+    "start": "npm-run-all --parallel devserver watch:main watch:projects watch:contact"
   },
   "repository": {
     "type": "git",

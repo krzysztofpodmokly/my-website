@@ -18,6 +18,21 @@
 </head>
 
 <body>
+    <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="nav-toggle">
+        <label for="nav-toggle" class="navigation__button">
+            <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background"></div>
+        <nav class="navigation__navbar">
+            <ul class="navigation__list">
+                <li class="navigation__item"><a href="#" class="navigation__link">About</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Contact</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">Random</a></li>
+                <li class="navigation__item"><a href="#" class="navigation__link">My Work</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <header class="header bg-parallax">
         <div class="header__logo-box">
@@ -62,7 +77,7 @@
             <div class="about">
                 <figure class="about__shape">
                     <img src="img/Krzysztof-Podmokly.jpg" alt="My photo" class="about__img">
-                    <figcaption class="about__caption">Explore!</figcaption>
+                    <!-- <figcaption class="about__caption">Explore!</figcaption> -->
                 </figure>
                 <div class="about__text">
                     <h3 class="heading-tertiary u-margin-bottom-small">Lorem, ipsum dolor sit amet consectetur</h3>
@@ -76,11 +91,11 @@
         </section>
 
         <section class="section-portfolio">
-            <div class="center-text margin-bottom-small margin-top-negative-big">
+            <div class="center-text margin-top-negative-big">
                 <h2 class="heading-secondary">Checkout my work</h2>
             </div>
             <div class="portfolio bg-parallax">
-                
+
                 <div class="portfolio-preview">
                     <div class="portfolio-preview__item"></div>
                     <div class="portfolio-preview__item"></div>
@@ -97,19 +112,25 @@
                         impedit, excepturi quos veniam
                         delectus</p>
                 </div>
-                
             </div>
         </section>
-
     </main>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-
+    <footer class="footer">
+        <div class="footer__nav">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#" class="footer__link">About</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">My Work</a></li>
+                <li class="footer__item"><a href="#" class="footer__link">Random</a></li>
+            </ul>
+        </div>
+        <div class="footer__copyright">
+            <p>Lorem ipsum dolor sit amet <a href="#" class="footer__link">Krzysztof Podmokły</a> consectetur adipisicing elit. Hic accusantium, iusto dolorem explicabo tenetur
+                illo nam magni fuga dolor ullam veritatis aliquid laudantium aspernatur a? Necessitatibus cum ipsa
+                mollitia odio.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

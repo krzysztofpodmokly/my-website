@@ -23,6 +23,10 @@
     &__text {
         font-size: 1.5rem;
         transform: translateX(1rem) skewX(-15deg);
+
+        & :last-child {
+            margin-top: 1.5rem;
+        }
     }
 
     &__img {
@@ -46,13 +50,13 @@
 
     }
 
-    &:hover &__caption {
-        opacity: 1;
-        transform: translate(-50%, -50%);
-    }
+    // &:hover &__caption {
+    //     opacity: 1;
+    //     transform: translate(-50%, -50%);
+    // }
 
-    &:hover &__img {
-        transform: translateX(.5rem) scale(1.05);
-        filter: blur(3px) brightness(70%) grayscale(20%);
-    }
+    // &:hover &__img {
+    //     transform: translateX(.5rem) scale(1.05);
+    //     filter: blur(3px) brightness(70%) grayscale(20%);
+    // }
 }

@@ -1,0 +1,93 @@
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    // height: 90vh;
+    perspective: 40rem;
+    
+    
+    &__feature {
+        margin: 0 1rem;
+        text-align: center;
+        background: $color-bright;
+        box-shadow: 0 1rem 1rem rgba($color-deep-dark, .25);
+        
+        transition: all .2s ease;
+        transform-style: preserve-3d;
+        transform: rotateX(10deg);
+        &:hover {
+            transform: rotateX(0deg);
+        }
+    }
+
+    &__img {
+        background-size: cover;
+        background-position: center bottom;
+        height: 25rem;
+        width: 15vw;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+        
+        &--1 {
+            background-image: linear-gradient(to right, 
+            $color-primary-light, 
+            $color-primary-dark), 
+            url("../../img/photo-github-1.JPG");
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right, 
+            $color-secondary-light, 
+            $color-secondary-dark), 
+            url("../../img/photo-github-2.JPG");
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right, 
+            $color-tertiary-light, 
+            $color-tertiary-dark), 
+            url("../../img/photo-github-3.JPG");
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right, 
+            $color-quaternary-light, 
+            $color-quaternary-dark), 
+            url("../../img/photo-github-1.JPG");
+        }
+
+        &--5 {
+            background-image: linear-gradient(to right, 
+            $color-primary-light, 
+            $color-primary-dark), 
+            url("../../img/photo-github-1.JPG");
+        }
+    }
+
+    &__heading {
+        font-size: 1.6rem;
+    }
+
+    &__details {
+        padding: 0 1rem;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        font-size: 1.4rem;
+        padding: 1rem 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $color-grey-dark-2;
+        }
+    }
+
+    &:hover &__feature:not(:hover) {
+        transform: scale(.8) rotateX(10deg);
+    }
+}

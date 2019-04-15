@@ -1,0 +1,51 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: $color-grey-dark-3;
+    font-size: 1.4rem;
+    color: $color-bright;
+    padding: 6rem 0;
+
+    &__nav {
+        margin: 0 2rem;
+    }
+
+    &__list {
+        display: flex;
+        list-style: none;
+        border-top: 1px solid $color-grey-dark-2; 
+    }
+
+    &__item {
+        margin: 1rem 1rem;
+    }
+
+    &__link {
+        display: inline-block;
+        transition: all .2s ease;
+        &:link,
+        &:visited {
+            color: $color-bright;
+            background-color: $color-grey-dark-3;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary-light;
+            box-shadow: 0 1rem 2rem rgba($color-deep-dark, .3);
+            transform: translateY(-.6rem) skewY(2deg);
+        }
+    }
+
+    &__copyright {
+        border-top: 1px solid $color-grey-dark-2; 
+        width: 50%;
+        
+        p {
+            margin-top: 1rem;
+        }
+
+    }
+}
