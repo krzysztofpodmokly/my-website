@@ -6,9 +6,11 @@
   "scripts": {
     "watch:main": "node-sass sass/main.scss css/style.css -w",
     "watch:projects": "node-sass sass/projects.scss css/projects.css -w",
-    "watch:contact": "node-sass sass/contact.scss css/contact.css -w",
+    "watch:form": "node-sass sass/form.scss css/form.css -w",
+    "watch:nav": "node-sass sass/layout/_navigation.scss css/navigation.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:main watch:projects watch:contact"
+    "start:main": "npm-run-all --parallel devserver watch:main",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,13 @@
     "autoprefixer": "^9.5.0",
     "concat": "^1.0.3",
     "node-sass": "^4.11.0",
+    "nodemon": "^1.18.11",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
   }
 }

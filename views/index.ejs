@@ -1,0 +1,112 @@
+<%- include('includes/header.ejs') %>
+
+<!-- Custom font -->
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+
+<link rel="stylesheet" href="css/icon-font.css">
+
+<!-- Custom styles -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/navigation.css">
+<title><%= pageTitle %></title>
+</head>
+
+<body>
+
+    <%- include('includes/nav.ejs') %>
+
+    <header class="header bg-parallax">
+        <div class="header__logo-box">
+            <img src="img/logo" alt="Logo for my website" class="header__logo">
+        </div>
+
+        <div class="header__content">
+            <span class="header__left">K</span>
+            <span class="header__left">r</span>
+            <span class="header__left">z</span>
+            <span class="header__left">y</span>
+            <span class="header__left">s</span>
+            <span class="header__left">z</span>
+            <span class="header__left">t</span>
+            <span class="header__left">o</span>
+            <span class="header__left">f</span>
+            <span>&nbsp;</span>
+            <span class="header__right">P</span>
+            <span class="header__right">o</span>
+            <span class="header__right">d</span>
+            <span class="header__right">m</span>
+            <span class="header__right">o</span>
+            <span class="header__right">k</span>
+            <span class="header__right">ł</span>
+            <span class="header__right">y</span>
+            <span class="header__sub">Web development</span>
+            <a href="#portfolio" class="btn btn--white btn--animated">View Work</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="section-about">
+            <div class="center-text margin-bottom-medium">
+                <h2 class="heading-secondary">About me</h2>
+            </div>
+            <div class="about">
+                <figure class="about__shape">
+                    <img src="img/Krzysztof-Podmokly.jpg" alt="My photo" class="about__img">
+                </figure>
+                <div class="about__text">
+                    <h3 class="heading-tertiary u-margin-bottom-small">Lorem, ipsum dolor sit amet consectetur</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem quasi praesentium
+                        libero in voluptas nihil, culpa perspiciatis nostrum earum molestias accusantium mollitia
+                        inventore
+                        voluptates consectetur hic? Magnam ea ipsam sint?</p>
+                    <a href="/about" class="btn-text">Learn more <span>&rarr;</span></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-portfolio" id="portfolio">
+            <div class="center-text margin-top-negative-big">
+                <h2 class="heading-secondary">Checkout my work</h2>
+            </div>
+            <div class="portfolio bg-parallax">
+
+                <div class="portfolio-preview">
+                    <div class="portfolio-preview__item"></div>
+                    <div class="portfolio-preview__item"></div>
+                    <div class="portfolio-preview__item"></div>
+                    <div class="portfolio-preview__item"></div>
+                    <div class="portfolio-preview__item"></div>
+                </div>
+
+                <a href="/projects" class="portfolio__link">
+                    <div class="portfolio-box">
+                        <div class="overlay"></div>
+                        <i class="portfolio-box__icon icon-basic-world"></i>
+                        <h3 class="heading-tertiary">Explore the work</h3>
+                        <p class="portfolio-box__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste
+                            impedit, excepturi quos veniam
+                            delectus</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__nav">
+            <ul class="footer__list">
+                <li class="footer__item"><a href="/" class="footer__link">Home</a></li>
+                <li class="footer__item"><a href="/about" class="footer__link">About</a></li>
+                <li class="footer__item"><a href="/contact" class="footer__link">Contact</a></li>
+                <li class="footer__item"><a href="/projects" class="footer__link">My Work</a></li>
+            </ul>
+        </div>
+        <div class="footer__copyright">
+            <p>Lorem ipsum dolor sit amet <a href="/about" class="footer__link">Krzysztof Podmokły</a> consectetur
+                adipisicing elit. Hic accusantium, iusto dolorem explicabo tenetur
+                illo nam magni fuga dolor ullam veritatis aliquid laudantium aspernatur a? Necessitatibus cum ipsa
+                mollitia odio.</p>
+        </div>
+    </footer>
+
+    <%- include('includes/end.ejs') %>

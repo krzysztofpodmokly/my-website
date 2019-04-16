@@ -3,11 +3,12 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    // height: 90vh;
     perspective: 40rem;
     
     
     &__feature {
+        flex-wrap: wrap;
+        position: relative;
         margin: 0 1rem;
         text-align: center;
         background: $color-bright;
@@ -16,8 +17,25 @@
         transition: all .2s ease;
         transform-style: preserve-3d;
         transform: rotateX(10deg);
+
         &:hover {
             transform: rotateX(0deg);
+        }
+    }
+
+    &__link {
+        position: absolute;
+        top: 10%;
+        opacity: 0;
+        visibility: hidden;
+        
+        &--live {
+            margin-bottom: 2rem;
+            width: 10rem;
+        }
+
+        &--code {
+            width: 10rem;
         }
     }
 
@@ -25,11 +43,12 @@
         background-size: cover;
         background-position: center bottom;
         height: 25rem;
-        width: 15vw;
+        width: 100%;
         background-blend-mode: screen;
         -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-        
+        transition: all .3s ease;
+
         &--1 {
             background-image: linear-gradient(to right, 
             $color-primary-light, 
@@ -68,10 +87,11 @@
 
     &__heading {
         font-size: 1.6rem;
+        padding: 0 3rem;
     }
 
     &__details {
-        padding: 0 1rem;
+        padding: 0 2rem;
     }
 
     &__list {
@@ -89,5 +109,15 @@
 
     &:hover &__feature:not(:hover) {
         transform: scale(.8) rotateX(10deg);
+        
+    }
+
+    &__feature:hover &__img {
+        filter: grayscale(30%) brightness(40%);
+    }
+
+    &__feature:hover &__link {
+        opacity: 1;
+        visibility: visible;
     }
 }

@@ -1,3 +1,5 @@
+@import "../abstracts/variables";
+
 .navigation {
     &__checkbox {
         display: none;
@@ -5,11 +7,11 @@
 
     &__button {
         background-color: $color-bright;
-        height: 7rem;
-        width: 7rem;
+        height: 6rem;
+        width: 6rem;
         position: fixed;
-        top: 6rem;
-        right: 6rem;
+        top: 2rem;
+        right: 1.5rem;
         border-radius: 50%;
         z-index: 2000;
         box-shadow: 0 1rem 3rem rgba($color-deep-dark, .3);
@@ -20,7 +22,7 @@
 
     &__icon {
         position: relative;
-        margin-top: 3.5rem;
+        margin-top: 3.0rem;
 
         &,
         &::before,
@@ -45,12 +47,10 @@
 
     &__button:hover &__icon::before {
         transform: translateY(1.5rem);
-        // top: -1rem;
     }
 
     &__button:hover &__icon::after {
         transform: translateY(-1.5rem);
-        // top: 1rem;
     }
 
     // Styling circle which will expand after click
@@ -59,8 +59,8 @@
         width: 6rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
+        top: 2rem;
+        right: 1.5rem;
         background-image: radial-gradient($color-primary-light 0%, $color-primary-dark 100%);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
@@ -118,7 +118,7 @@
     }
 
     &__checkbox:checked ~ &__background {
-        transform: scale(50);
+        transform: scale(80);
     }
 
     &__checkbox:checked ~ &__navbar {

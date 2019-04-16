@@ -10,7 +10,7 @@
         font-size: $default-font-size;
         border: none;
         cursor: pointer;
-        transition: all .5s;
+        transition: all .5s ease;
         position: relative;
         font-weight: 400;
     }
@@ -55,11 +55,15 @@
     }
 
     &--blue {
-
+        color:$color-bright;
+        background-color: $color-primary-dark;
+        &::after {
+            background-color: $color-primary-dark;
+        }
     }
 
     &--animated {
-        animation: moveInUp .7s ease-in 3.5s;
+        animation: moveInUp .7s ease 3.5s;
         animation-fill-mode: backwards;
     }
 

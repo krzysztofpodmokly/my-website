@@ -48,7 +48,7 @@ html {
 
 body {
   box-sizing: border-box;
-  padding: 1.5rem; }
+  padding: .5rem; }
 
 .bg-parallax {
   background-attachment: fixed;
@@ -121,7 +121,7 @@ body {
   font-size: 1.6rem;
   border: none;
   cursor: pointer;
-  transition: all .5s;
+  transition: all .5s ease;
   position: relative;
   font-weight: 400; }
 
@@ -155,8 +155,14 @@ body {
   .btn--white::after {
     background-color: #fff; }
 
+.btn--blue {
+  color: #fff;
+  background-color: #2176FF; }
+  .btn--blue::after {
+    background-color: #2176FF; }
+
 .btn--animated {
-  animation: moveInUp .7s ease-in 3.5s;
+  animation: moveInUp .7s ease 3.5s;
   animation-fill-mode: backwards; }
 
 .btn-text {
@@ -213,14 +219,17 @@ body {
 
 .portfolio {
   display: flex;
-  align-items: center;
   justify-content: center;
   height: 90vh;
-  position: relative;
   background-image: linear-gradient(to right bottom, rgba(33, 118, 255, 0.5), rgba(53, 167, 255, 0.5)), url("../../img/photo-2.jpg");
   background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%); }
+  .portfolio__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: inherit; }
   .portfolio:hover .portfolio-preview__item:nth-child(1) {
     transform: translateX(15rem) rotate(-40deg); }
   .portfolio:hover .portfolio-preview__item:nth-child(2) {
@@ -234,8 +243,9 @@ body {
 
 .portfolio-preview {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: center; }
+  position: relative; }
   .portfolio-preview__item {
     position: absolute;
     border-radius: 3px; }
@@ -280,7 +290,8 @@ body {
   text-align: center;
   width: 30rem;
   cursor: pointer;
-  transition: all .2s ease-out; }
+  transition: all .2s ease-out;
+  z-index: 3000; }
   .portfolio-box .overlay {
     position: absolute;
     top: 50%;
@@ -298,6 +309,17 @@ body {
   .portfolio-box:hover {
     transform: translateY(-0.6rem);
     box-shadow: 0 1.5rem 1rem rgba(0, 0, 0, 0.35); }
+
+.section-error {
+  background-image: linear-gradient(to right bottom, #35A7FF, #2176FF);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.error {
+  font-size: 3rem; }
 
 .header {
   height: 90vh;
@@ -369,7 +391,7 @@ body {
     animation: fadeIn 1s ease-in 2s;
     animation-fill-mode: backwards;
     font-weight: 300;
-    letter-spacing: 1rem;
+    letter-spacing: 1.5rem;
     font-size: 1.6rem;
     margin: 1.5rem 0 4rem 0; }
 
@@ -411,11 +433,11 @@ body {
 
 .navigation__button {
   background-color: #fff;
-  height: 7rem;
-  width: 7rem;
+  height: 6rem;
+  width: 6rem;
   position: fixed;
-  top: 6rem;
-  right: 6rem;
+  top: 2rem;
+  right: 1.5rem;
   border-radius: 50%;
   z-index: 2000;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
@@ -425,7 +447,7 @@ body {
 
 .navigation__icon {
   position: relative;
-  margin-top: 3.5rem; }
+  margin-top: 3.0rem; }
   .navigation__icon, .navigation__icon::before, .navigation__icon::after {
     width: 3rem;
     height: 2px;
@@ -452,8 +474,8 @@ body {
   width: 6rem;
   border-radius: 50%;
   position: fixed;
-  top: 6.5rem;
-  right: 6.5rem;
+  top: 2rem;
+  right: 1.5rem;
   background-image: radial-gradient(#35A7FF 0%, #2176FF 100%);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
@@ -499,7 +521,7 @@ body {
   color: #2176FF; }
 
 .navigation__checkbox:checked ~ .navigation__background {
-  transform: scale(50); }
+  transform: scale(80); }
 
 .navigation__checkbox:checked ~ .navigation__navbar {
   opacity: 1;
