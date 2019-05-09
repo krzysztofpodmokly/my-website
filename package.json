@@ -7,9 +7,10 @@
     "watch:main": "node-sass sass/main.scss css/style.css -w",
     "watch:projects": "node-sass sass/projects.scss css/projects.css -w",
     "watch:form": "node-sass sass/form.scss css/form.css -w",
+    "watch:error": "node-sass sass/error.scss css/error.css -w",
     "watch:nav": "node-sass sass/layout/_navigation.scss css/navigation.css -w",
     "devserver": "live-server",
-    "start:main": "npm-run-all --parallel devserver watch:main",
+    "start:main": "npm-run-all --parallel devserver watch:main watch:projects watch:form watch:error",
     "start": "nodemon app.js"
   },
   "repository": {
@@ -31,8 +32,10 @@
     "postcss-cli": "^6.1.2"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "mongoose": "^5.5.4"
   }
 }

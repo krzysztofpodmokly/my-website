@@ -1,21 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- Custom font -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/icon-font.css">
+<%- include('includes/header.ejs') %>
 
     <!-- Custom styles -->
-    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/form.css">
 
     <title><%= pageTitle %></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../public/assets/message.js"></script>
 </head>
 
 <body>
@@ -25,7 +16,7 @@
     <section class="section-contact">
         <div class="contact">
             <div class="contact__form">
-                <form action="" class="form" method="POST">
+                <form action="/contact" class="form" method="POST">
                     <div class="margin-bottom-small">
                         <h2 class="heading-secondary">Contact me</h2>
                     </div>
@@ -44,11 +35,11 @@
                     </div>
 
                     <div class="form__group">
-                        <button class="btn btn--blue">Send &rarr;</button>
+                        <button class="btn btn--blue" type="submit">Send &rarr;</button>
                     </div>
                 </form>
             </div>
         </div>
     </section>
-
+    
 <%- include('includes/end.ejs') %>
