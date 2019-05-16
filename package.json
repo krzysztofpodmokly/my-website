@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:main": "node-sass sass/main.scss css/style.css -w",
-    "watch:projects": "node-sass sass/projects.scss css/projects.css -w",
-    "watch:form": "node-sass sass/form.scss css/form.css -w",
-    "watch:error": "node-sass sass/error.scss css/error.css -w",
-    "watch:nav": "node-sass sass/layout/_navigation.scss css/navigation.css -w",
+    "watch:main": "node-sass sass/main.scss public/css/style.css -w",
+    "watch:projects": "node-sass sass/projects.scss public/css/projects.css -w",
+    "watch:form": "node-sass sass/form.scss public/css/form.css -w",
+    "watch:error": "node-sass sass/error.scss public/css/error.css -w",
+    "watch:nav": "node-sass sass/layout/_navigation.scss public/css/navigation.css -w",
     "devserver": "live-server",
     "start:main": "npm-run-all --parallel devserver watch:main watch:projects watch:form watch:error",
     "start": "nodemon app.js"
