@@ -15,7 +15,7 @@ exports.createMessage = (req, res, next) => {
         .save()
         .then(result => {
             console.log('Message was sent!');
-            res.redirect('/');
+            res.redirect('/'); // redirect done by message.js in assets
         });
     };
 

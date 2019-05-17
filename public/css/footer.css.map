@@ -1,0 +1,1 @@
+{"version":3,"sourceRoot":"","sources":["../../sass/layout/_footer.scss","../../sass/abstracts/_variables.scss"],"names":[],"mappings":"AAEA;EACI;EACA;EACA,kBCegB;EDdhB;EACA,OCKW;EDJX;;AAEA;EACI;;AAGJ;EACI;EACA;EACA;;AAGJ;EACI;;AAGJ;EACI;EACA;;AACA;EAEI,OCjBG;EDkBH,kBCVQ;EDWR;EACA;;AAGJ;EAEI,OCpCU;EDqCV;EACA;;AAIR;EACI;EACA;;AAEA;EACI","file":"footer.css"}

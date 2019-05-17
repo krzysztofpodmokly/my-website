@@ -6,13 +6,14 @@
 <link rel="stylesheet" href="../public/css/navigation.css">
 <link rel="stylesheet" href="../public/css/style.css">
 <link rel="stylesheet" href="../public/css/loader.css">
+<link rel="stylesheet" href="../public/css/footer.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 <script src="../public/assets/loader.js"></script>
 <title><%= pageTitle %></title>
 </head>
 
 <body>
-    <%- include('includes/loader.ejs') %>
+    <!-- <%- include('includes/loader.ejs') %> -->
     <%- include('includes/nav.ejs') %>
 
     <header class="header bg-parallax">
@@ -46,7 +47,7 @@
 
     <main>
         <section class="section-about">
-            <div class="center-text margin-bottom-medium">
+            <div class="center-text margin-bottom-medium" data-aos="fade-in">
                 <h2 class="heading-secondary">About me</h2>
             </div>
             <div class="about">
@@ -92,7 +93,9 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <%- include('includes/footer.ejs') %>
+    
+    <!-- <footer class="footer">
         <div class="footer__nav">
             <ul class="footer__list">
                 <li class="footer__item"><a href="/" class="footer__link">Home</a></li>
@@ -107,6 +110,6 @@
                 illo nam magni fuga dolor ullam veritatis aliquid laudantium aspernatur a? Necessitatibus cum ipsa
                 mollitia odio.</p>
         </div>
-    </footer>
+    </footer> -->
 
-    <%- include('includes/end.ejs') %>
+<%- include('includes/end.ejs') %>

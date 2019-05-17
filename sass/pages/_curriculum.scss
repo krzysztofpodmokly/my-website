@@ -1,0 +1,17 @@
+.curriculum {
+    &__box {
+        display: flex;
+    }
+
+    &__img {
+        & img {
+            width: 50vw;
+        }
+    }
+
+    &__text {
+        display: flex;
+        align-items: center;
+        font-size: 1.5rem;
+    }
+}

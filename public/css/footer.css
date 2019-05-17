@@ -1,0 +1,43 @@
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  font-size: 1.4rem;
+  color: #fff;
+  padding: 6rem 0;
+}
+.footer__nav {
+  margin: 0 2rem;
+}
+.footer__list {
+  display: flex;
+  list-style: none;
+  border-top: 1px solid #999;
+}
+.footer__item {
+  margin: 1rem 1rem;
+}
+.footer__link {
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+.footer__link:link, .footer__link:visited {
+  color: #fff;
+  background-color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.footer__link:hover, .footer__link:active {
+  color: #35A7FF;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.6rem) skewY(2deg);
+}
+.footer__copyright {
+  border-top: 1px solid #999;
+  width: 50%;
+}
+.footer__copyright p {
+  margin-top: 1rem;
+}
+
+/*# sourceMappingURL=footer.css.map */

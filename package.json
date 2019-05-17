@@ -10,8 +10,10 @@
     "watch:error": "sass --watch sass/error.scss public/css/error.css",
     "watch:nav": "sass --watch sass/layout/navigation.scss public/css/navigation.css",
     "watch:load": "sass --watch sass/layout/_loader.scss public/css/loader.css",
+    "watch:curr": "sass --watch sass/curriculum.scss public/css/curriculum.css",
+    "watch:foot": "sass --watch sass/layout/_footer.scss public/css/footer.css",
     "devserver": "live-server",
-    "all": "npm-run-all --parallel watch:main watch:projects watch:form watch:error watch:nav watch:load",
+    "all": "npm-run-all --parallel watch:main watch:projects watch:form watch:error watch:nav watch:load watch:curr watch:foot",
     "start": "nodemon app.js"
   },
   "repository": {

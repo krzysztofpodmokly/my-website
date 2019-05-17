@@ -69,4 +69,14 @@ body {
   letter-spacing: 0.2rem;
 }
 
+.curriculum__box {
+  display: flex;
+}
+.curriculum__img {
+  background-size: cover;
+}
+.curriculum__img img {
+  width: 50vw;
+}
+
 /*# sourceMappingURL=curriculum.css.map */
