@@ -1,12 +1,23 @@
 const Message = require('../models/message');
 
 exports.createMessage = (req, res, next) => {
-    const messageProps = req.body;
-    Message(messageProps).save((err, data) => {
-        console.log(data);
-        res.json(data);
+    const email = req.body.email;
+    const fullName = req.body.fullName;
+    const info = req.body.message;
+
+    const message = new Message({
+        email,
+        fullName,
+        message: info
     });
-};
+
+    message
+        .save()
+        .then(result => {
+            console.log('Message was sent!');
+            res.redirect('/');
+        });
+    };
 
 exports.readMessage = (req, res, next) => {
     Message.find({}, (err, data) => {

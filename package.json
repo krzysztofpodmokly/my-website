@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:main": "node-sass sass/main.scss public/css/style.css -w",
-    "watch:projects": "node-sass sass/projects.scss public/css/projects.css -w",
-    "watch:form": "node-sass sass/form.scss public/css/form.css -w",
-    "watch:error": "node-sass sass/error.scss public/css/error.css -w",
-    "watch:nav": "node-sass sass/layout/_navigation.scss public/css/navigation.css -w",
+    "watch:main": "sass --watch sass/main.scss public/css/style.css",
+    "watch:projects": "sass --watch sass/projects.scss public/css/projects.css",
+    "watch:form": "sass --watch sass/form.scss public/css/form.css",
+    "watch:error": "sass --watch sass/error.scss public/css/error.css",
+    "watch:nav": "sass --watch sass/layout/navigation.scss public/css/navigation.css",
+    "watch:load": "sass --watch sass/layout/_loader.scss public/css/loader.css",
     "devserver": "live-server",
-    "start:main": "npm-run-all --parallel devserver watch:main watch:projects watch:form watch:error",
+    "all": "npm-run-all --parallel watch:main watch:projects watch:form watch:error watch:nav watch:load",
     "start": "nodemon app.js"
   },
   "repository": {

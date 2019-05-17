@@ -16,7 +16,8 @@ $(function() {
             url: '/contact',
             data: sendContent,
             success (data) {
-                location.reload();
+                window.location.assign('/')
+                // location.reload();
             }
         });
 

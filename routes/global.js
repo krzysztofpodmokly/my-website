@@ -6,12 +6,12 @@ const router = express.Router();
 
 router.post('/contact', messageController.createMessage);
 
-router.get('/', messageController.getHomePage);
 
 router.get('/contact', messageController.getContactPage);
 
-router.get('/projects', messageController.getContactPage);
+router.get('/projects', messageController.getProjectPage);
 
-router.get('/about', messageController.getContactPage);
+router.get('/about', messageController.getAboutPage);
+router.get('/', messageController.getHomePage);
 
 module.exports = router;

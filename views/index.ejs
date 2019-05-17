@@ -3,13 +3,16 @@
 <link rel="stylesheet" href="public/css/icon-font.css">
 
 <!-- Custom styles -->
-<link rel="stylesheet" href="public/css/navigation.css">
-<link rel="stylesheet" href="public/css/style.css">
+<link rel="stylesheet" href="../public/css/navigation.css">
+<link rel="stylesheet" href="../public/css/style.css">
+<link rel="stylesheet" href="../public/css/loader.css">
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="../public/assets/loader.js"></script>
 <title><%= pageTitle %></title>
 </head>
 
 <body>
-
+    <%- include('includes/loader.ejs') %>
     <%- include('includes/nav.ejs') %>
 
     <header class="header bg-parallax">

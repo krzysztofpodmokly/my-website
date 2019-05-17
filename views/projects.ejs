@@ -3,11 +3,17 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="public/css/navigation.css">
     <link rel="stylesheet" href="public/css/projects.css">
+    <link rel="stylesheet" href="../public/css/loader.css">
 
     <title><%= pageTitle %></title>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../public/assets/loader.js"></script>
+
 </head>
 
 <body>
+    <%- include('includes/loader.ejs') %>
     <%- include('includes/nav.ejs') %>
 
     <section class="section-projects">

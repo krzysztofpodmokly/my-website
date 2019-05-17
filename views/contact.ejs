@@ -3,14 +3,17 @@
     <!-- Custom styles -->
     <link rel="stylesheet" href="public/css/navigation.css">
     <link rel="stylesheet" href="public/css/form.css">
+    <link rel="stylesheet" href="../public/css/loader.css">
 
     <title><%= pageTitle %></title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../public/assets/message.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="../public/assets/loader.js"></script>
 </head>
 
 <body>
-
+    <%- include('includes/loader.ejs') %>
     <%- include('includes/nav.ejs') %>
 
     <section class="section-contact">
@@ -31,7 +34,8 @@
                     </div>
                     
                     <div class="form__group">
-                        <textarea name="" class="form__message" cols="20" rows="3" placeholder="Enter message" id="message" required></textarea>
+                        <input type="text" class="form__message" placeholder="Enter message" id="message" required>
+                        <label for="message" class="form__label">Message</label>
                     </div>
 
                     <div class="form__group">
