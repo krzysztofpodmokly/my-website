@@ -3,51 +3,60 @@
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 html {
-  font-size: 62.5%; }
+  font-size: 62.5%;
+}
 
 body {
   box-sizing: border-box;
-  padding: .5rem; }
+  padding: 0.5rem;
+}
 
 .bg-parallax {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+}
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #333;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 5rem; }
-  .heading-primary--left {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: .5rem;
-    animation-name: moveInDown;
-    animation-duration: 1s; }
-  .heading-primary--right {
-    font-size: 3rem;
-    font-weight: 400;
-    letter-spacing: .5rem;
-    animation-name: moveInDown;
-    animation-duration: 1s; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 1.5rem;
-    font-weight: 400;
-    letter-spacing: 1.3rem;
-    animation-name: moveInUp;
-    animation-duration: 1s; }
+  margin-bottom: 5rem;
+}
+.heading-primary--left {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  animation-name: moveInDown;
+  animation-duration: 1s;
+}
+.heading-primary--right {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  animation-name: moveInDown;
+  animation-duration: 1s;
+}
+.heading-primary--sub {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 1.3rem;
+  animation-name: moveInUp;
+  animation-duration: 1s;
+}
 
 .heading-secondary {
   text-transform: uppercase;
@@ -57,7 +66,9 @@ body {
   background-image: linear-gradient(to right, #2176FF, #35A7FF);
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem; }
+  letter-spacing: 0.2rem;
+  line-height: 1.7;
+}
 
 .section-error {
   background-image: linear-gradient(to right bottom, #35A7FF, #2176FF);
@@ -65,7 +76,11 @@ body {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .error {
-  font-size: 3rem; }
+  font-size: 3rem;
+}
+
+/*# sourceMappingURL=error.css.map */

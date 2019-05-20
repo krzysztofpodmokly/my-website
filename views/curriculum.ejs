@@ -1,47 +1,58 @@
 <%- include('includes/header.ejs') %>
 
-    <!-- Custom styles -->
-    <link rel="stylesheet" href="public/css/navigation.css">
-    <link rel="stylesheet" href="public/css/curriculum.css">
-    <link rel="stylesheet" href="../public/css/loader.css">
-    <link rel="stylesheet" href="../public/css/footer.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<!-- Custom styles -->
+<link rel="stylesheet" href="public/css/navigation.css">
+<link rel="stylesheet" href="public/css/curriculum.css">
+<link rel="stylesheet" href="../public/css/loader.css">
+<link rel="stylesheet" href="../public/css/footer.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-    <title><%= pageTitle %></title>
+<title><%= pageTitle %></title>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
-    <script src="../public/assets/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script src="../public/assets/loader.js"></script>
 
 </head>
 
 <body>
-    <!-- <%- include('includes/loader.ejs') %> -->
+    <%- include('includes/loader.ejs') %>
     <%- include('includes/nav.ejs') %>
 
     <section class="section-curriculum">
-        <div class="curriculum__box" data-aos="fade-in">
-            <div class="curriculum__img">
-                <img src="../public/img/agh_1.jpg" alt="AGH University of Science">
+        <div class="curriculum__box">
+            <div class="curriculum__img" data-aos="fade-right">
+                <img src="../public/img/about-3.jpg" alt="AGH University of Science">
             </div>
-            <div class="curriculum__text">
+            <div class="curriculum__text" data-aos="fade-left">
+                <div class="align-left margin-bottom-small margin-top-small">
+                    <h2 class="heading-secondary">Education</h2>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit pariatur sit laudantium
                     facere. Cum magni ea labore consequatur hic odio dolores</p>
             </div>
         </div>
+
         <div class="curriculum__box">
-            <div class="curriculum__text">
+            <div class="curriculum__text" data-aos="fade-right">
+                <div class="curriculum__header margin-bottom-small margin-top-small">
+                    <h2 class="heading-secondary">Experience</h2>
+                </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit pariatur sit laudantium
                     facere. Cum magni ea labore consequatur hic odio dolores</p>
             </div>
-            <div class="curriculum__img">
-                <img src="../public/img/agh_1.jpg" alt="AGH University of Science">
+            <div class="curriculum__img" data-aos="fade-left">
+                <img src="../public/img/about-1.jpg" alt="My Experience">
             </div>
         </div>
+        
         <div class="curriculum__box">
-            <div class="curriculum__img">
-                <img src="../public/img/agh_1.jpg" alt="AGH University of Science">
+            <div class="curriculum__img" data-aos="fade-right">
+                <img src="../public/img/about-2.jpg" alt="AGH University of Science">
             </div>
-            <div class="curriculum__text">
+            <div class="curriculum__text" data-aos="fade-left">
+                    <div class="align-right margin-bottom-small margin-top-small">
+                            <h2 class="heading-secondary">Interests</h2>
+                        </div>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit pariatur sit laudantium
                     facere. Cum magni ea labore consequatur hic odio dolores</p>
             </div>
@@ -50,5 +61,5 @@
     <%- include('includes/footer.ejs') %>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="../../public/assets/aos.js"></script>
- <%- include('includes/end.ejs') %>
+    <script src="../public/assets/aos.js"></script>
+    <%- include('includes/end.ejs') %>

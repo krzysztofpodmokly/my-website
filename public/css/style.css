@@ -129,6 +129,7 @@ body {
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
+  line-height: 1.7;
 }
 
 .center-text {
@@ -145,6 +146,10 @@ body {
 
 .margin-bottom-small {
   margin-bottom: 2rem;
+}
+
+.margin-top-small {
+  margin-top: 2rem;
 }
 
 .margin-top-negative-big {

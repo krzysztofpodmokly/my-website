@@ -1,17 +1,48 @@
+body {
+    padding: 0;
+}
+
 .curriculum {
     &__box {
         display: flex;
+        width: 100vw;
+        align-items: center;
+
+        &:nth-child(2) {
+            margin: -.5rem 0;
+        }
+
+        &:nth-child(3) {
+            margin-bottom: -.5rem;
+        }
+
     }
 
     &__img {
+        
         & img {
             width: 50vw;
+            background-size: cover;
         }
     }
 
     &__text {
+        width: 50vw;
         display: flex;
-        align-items: center;
+        flex-direction: column;
+        padding: 5rem;
+        // align-items: center;
         font-size: 1.5rem;
+
+
+    }
+
+    &__header {
+        &:nth-child(1) {
+            padding-right: 3rem;
+            align-self: flex-end;
+
+        }
     }
 }
+

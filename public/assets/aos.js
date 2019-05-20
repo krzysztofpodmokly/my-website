@@ -1,3 +1,5 @@
 AOS.init({
-    duration: 5000
+    duration: 1200,
+    easing: 'ease-out',
+    mirror: true
 });
