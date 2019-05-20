@@ -13,6 +13,7 @@
         text-align: center;
         background: $color-bright;
         box-shadow: 0 1rem 1rem rgba($color-deep-dark, .25);
+        height: 49rem;
         
         transition: all .2s ease;
         transform-style: preserve-3d;
@@ -74,7 +75,7 @@
             background-image: linear-gradient(to right, 
             $color-quaternary-light, 
             $color-quaternary-dark), 
-            url("../../img/photo-github-1.JPG");
+            url("../../img/photo-github-4.JPG");
         }
 
         &--5 {
@@ -100,7 +101,7 @@
 
     &__item {
         font-size: 1.4rem;
-        padding: 1rem 0;
+        padding: .5rem 0;
 
         &:not(:last-child) {
             border-bottom: 1px solid $color-grey-dark-2;

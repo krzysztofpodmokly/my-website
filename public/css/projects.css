@@ -166,6 +166,7 @@ body {
   text-align: center;
   background: #fff;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
+  height: 49rem;
   transition: all 0.2s ease;
   transform-style: preserve-3d;
   transform: rotateX(10deg);
@@ -206,7 +207,7 @@ body {
   background-image: linear-gradient(to right, #ffb900, #ff7730), url("../../img/photo-github-3.JPG");
 }
 .projects__img--4 {
-  background-image: linear-gradient(to right, #5643fa, #2998ff), url("../../img/photo-github-1.JPG");
+  background-image: linear-gradient(to right, #5643fa, #2998ff), url("../../img/photo-github-4.JPG");
 }
 .projects__img--5 {
   background-image: linear-gradient(to right, #35A7FF, #2176FF), url("../../img/photo-github-1.JPG");
@@ -223,7 +224,7 @@ body {
 }
 .projects__item {
   font-size: 1.4rem;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
 }
 .projects__item:not(:last-child) {
   border-bottom: 1px solid #999;
