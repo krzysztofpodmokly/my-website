@@ -74,10 +74,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: 0.45;
   overflow: hidden;
 }
 
@@ -225,6 +223,12 @@ body {
 .projects__item {
   font-size: 1.4rem;
   padding: 0.5rem 0;
+}
+.projects__item::before {
+  content: "";
+  background-image: url("../../public/img/checkmark.svg");
+  height: 20px;
+  width: 20px;
 }
 .projects__item:not(:last-child) {
   border-bottom: 1px solid #999;
