@@ -97,7 +97,7 @@
 
     &__list {
         list-style: none;
-        list-style-image: url("../../public/img/checkmark.svg")
+        // list-style-image: url("../../public/img/checkmark.svg"); // !
     }
 
     &__item {
@@ -115,7 +115,7 @@
         //     width: 20px;
             // background:  no-repeat center;
 
-        }
+        // }
 
         &:not(:last-child) {
             border-bottom: 1px solid $color-grey-dark-2;

@@ -1,7 +1,14 @@
+// @import "../abstracts/mixins";
+
 .section-about {
     background-color: $color-grey-light-1;
     padding: 20rem 0 30rem 0;
     margin-top: -14rem;
+
+    @include respond(phone) {
+        padding: 10rem 0 30rem 0;
+        margin-top: -6rem;
+    }
 }
 
 .section-portfolio {

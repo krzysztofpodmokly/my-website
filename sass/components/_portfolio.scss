@@ -6,10 +6,17 @@
         rgba($color-primary-dark, .5),
         rgba($color-primary-light, .5)),
         url('../../img/photo-2.jpg');
-    background-size: cover;
+    // background-size: cover;
 
     -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
     clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+
+    @include respond(phone) {
+        height: 85vw;
+
+        -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    }
 
     &__link {
         display: flex;
@@ -45,6 +52,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+
+    @include respond(phone) {
+        display: none;
+    }
     
     &__item {
         position: absolute;
@@ -103,6 +114,12 @@
     cursor: pointer;
     transition: all .2s ease-out;
     z-index: 3000;
+
+    @include respond(phone) {
+        padding: .5rem;
+        font-size: 1.2rem;
+        width: 22rem;
+    }
 
     .overlay {
         position: absolute;

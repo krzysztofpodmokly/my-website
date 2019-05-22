@@ -11,6 +11,13 @@
     -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
 
+    @include respond(phone) {
+        height: 75vw;
+
+        -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
+    }
+
     &__content {
         position: absolute;
         top: 50%;
@@ -22,6 +29,10 @@
         font-weight: 300;
         color: $color-bright;
         width: 100%;
+
+        @include respond(phone) {
+            font-size: 2rem;
+        }
     }
 
     &__left {
@@ -29,7 +40,7 @@
         animation-name: fadeInLeft;
         animation-fill-mode: backwards;
         animation-duration: 1.6s;
-        letter-spacing: .2rem;
+        // letter-spacing: .2rem;
 
         &:nth-child(1) {
             animation-delay: .9s;
@@ -66,6 +77,7 @@
         &:nth-child(9) {
             animation-delay: .1s;
         }
+
     }
 
     &__right {
@@ -73,7 +85,7 @@
         animation-name: fadeInRight;
         animation-fill-mode: backwards;
         animation-duration: 1.6s;
-        letter-spacing: .5rem;
+        // letter-spacing: .5rem;
 
         &:nth-child(11) {
             animation-delay: .1s;
@@ -120,6 +132,12 @@
         letter-spacing: 1.5rem;
         font-size: 1.6rem;
         margin: 1.5rem 0 4rem 0;
+        margin-left: 1rem;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            
+        }
     }
 
 }

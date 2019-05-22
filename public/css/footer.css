@@ -1,3 +1,28 @@
+/*
+
+0px - 600px:       Phone
+601px - 900px:     Tablet portrait
+901px - 1200px:    Tablet landscape
+1201px - 1800px:   In this range normal styles are applied
+1801px ++ :        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Size calculations: browser default font size is 16px.
+Media queries are not overwritten by our setup (62.5%).
+max-width: 600px = 600px / browser's default = 600px / 16 = 37.5em
+
+Order of writing queries:
+1. Base + Typography
+2. General layout + grid
+3. Page layout
+4. Components
+
+*/
 .footer {
   display: flex;
   justify-content: space-around;
@@ -6,13 +31,34 @@
   color: #fff;
   padding: 6rem 0;
 }
+@media (max-width: 56.25em) {
+  .footer {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 37.5em) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer__nav {
   margin: 0 2rem;
+}
+@media (max-width: 37.5em) {
+  .footer__nav {
+    width: 80%;
+  }
 }
 .footer__list {
   display: flex;
   list-style: none;
   border-top: 1px solid #999;
+}
+@media (max-width: 37.5em) {
+  .footer__list {
+    justify-content: center;
+  }
 }
 .footer__item {
   margin: 1rem 1rem;
@@ -35,6 +81,11 @@
 .footer__copyright {
   border-top: 1px solid #999;
   width: 50%;
+}
+@media (max-width: 37.5em) {
+  .footer__copyright {
+    width: 80%;
+  }
 }
 .footer__copyright p {
   margin-top: 1rem;

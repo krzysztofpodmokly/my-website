@@ -1,3 +1,28 @@
+/*
+
+0px - 600px:       Phone
+601px - 900px:     Tablet portrait
+901px - 1200px:    Tablet landscape
+1201px - 1800px:   In this range normal styles are applied
+1801px ++ :        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Size calculations: browser default font size is 16px.
+Media queries are not overwritten by our setup (62.5%).
+max-width: 600px = 600px / browser's default = 600px / 16 = 37.5em
+
+Order of writing queries:
+1. Base + Typography
+2. General layout
+3. Page layout
+4. Components
+
+*/
 *,
 *::before,
 *::after {
@@ -9,10 +34,25 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   box-sizing: border-box;
   padding: 0.5rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 .bg-parallax {
@@ -36,23 +76,15 @@ body {
   margin-bottom: 5rem;
 }
 .heading-primary--left {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
   animation-name: moveInDown;
   animation-duration: 1s;
 }
 .heading-primary--right {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
   animation-name: moveInDown;
   animation-duration: 1s;
 }
 .heading-primary--sub {
   display: block;
-  font-size: 1.5rem;
-  font-weight: 400;
   letter-spacing: 1.3rem;
   animation-name: moveInUp;
   animation-duration: 1s;
@@ -61,13 +93,10 @@ body {
 .heading-secondary {
   text-transform: uppercase;
   font-size: 3rem;
-  font-weight: 700;
-  display: inline-block;
   background-image: linear-gradient(to right, #2176FF, #35A7FF);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
-  line-height: 1.7;
 }
 
 .center-text {

@@ -1,3 +1,28 @@
+/*
+
+0px - 600px:       Phone
+601px - 900px:     Tablet portrait
+901px - 1200px:    Tablet landscape
+1201px - 1800px:   In this range normal styles are applied
+1801px ++ :        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Size calculations: browser default font size is 16px.
+Media queries are not overwritten by our setup (62.5%).
+max-width: 600px = 600px / browser's default = 600px / 16 = 37.5em
+
+Order of writing queries:
+1. Base + Typography
+2. General layout
+3. Page layout
+4. Components
+
+*/
 @keyframes moveInDown {
   0% {
     opacity: 0;
@@ -60,6 +85,31 @@
     opacity: 0;
   }
 }
+/*
+
+0px - 600px:       Phone
+601px - 900px:     Tablet portrait
+901px - 1200px:    Tablet landscape
+1201px - 1800px:   In this range normal styles are applied
+1801px ++ :        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Size calculations: browser default font size is 16px.
+Media queries are not overwritten by our setup (62.5%).
+max-width: 600px = 600px / browser's default = 600px / 16 = 37.5em
+
+Order of writing queries:
+1. Base + Typography
+2. General layout
+3. Page layout
+4. Components
+
+*/
 *,
 *::before,
 *::after {
@@ -71,10 +121,25 @@
 html {
   font-size: 62.5%;
 }
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   box-sizing: border-box;
   padding: 0.5rem;
+}
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 .bg-parallax {
@@ -98,23 +163,15 @@ body {
   margin-bottom: 5rem;
 }
 .heading-primary--left {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
   animation-name: moveInDown;
   animation-duration: 1s;
 }
 .heading-primary--right {
-  font-size: 3rem;
-  font-weight: 400;
-  letter-spacing: 0.5rem;
   animation-name: moveInDown;
   animation-duration: 1s;
 }
 .heading-primary--sub {
   display: block;
-  font-size: 1.5rem;
-  font-weight: 400;
   letter-spacing: 1.3rem;
   animation-name: moveInUp;
   animation-duration: 1s;
@@ -123,13 +180,10 @@ body {
 .heading-secondary {
   text-transform: uppercase;
   font-size: 3rem;
-  font-weight: 700;
-  display: inline-block;
   background-image: linear-gradient(to right, #2176FF, #35A7FF);
   -webkit-background-clip: text;
   color: transparent;
   letter-spacing: 0.2rem;
-  line-height: 1.7;
 }
 
 .center-text {
@@ -235,6 +289,13 @@ body {
   transform: skewX(15deg);
   transition: all 0.2s ease-out;
 }
+@media (max-width: 37.5em) {
+  .about {
+    width: 100%;
+    padding: 4rem;
+    transform: skewX(0deg);
+  }
+}
 .about__shape {
   width: 15rem;
   height: 15rem;
@@ -246,9 +307,20 @@ body {
   clip-path: circle(50% at 50% 50%);
   transform: translateX(-2rem) skewX(-15deg);
 }
+@media (max-width: 37.5em) {
+  .about__shape {
+    margin-right: 3rem;
+    transform: skewX(0deg);
+  }
+}
 .about__text {
   font-size: 1.5rem;
   transform: translateX(1rem) skewX(-15deg);
+}
+@media (max-width: 37.5em) {
+  .about__text {
+    transform: skewX(0deg);
+  }
 }
 .about__text :last-child {
   margin-top: 1.5rem;
@@ -277,9 +349,15 @@ body {
   justify-content: center;
   height: 90vh;
   background-image: linear-gradient(to right bottom, rgba(33, 118, 255, 0.5), rgba(53, 167, 255, 0.5)), url("../../img/photo-2.jpg");
-  background-size: cover;
   -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+}
+@media (max-width: 37.5em) {
+  .portfolio {
+    height: 85vw;
+    -webkit-clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 100%);
+  }
 }
 .portfolio__link {
   display: flex;
@@ -308,6 +386,11 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+}
+@media (max-width: 37.5em) {
+  .portfolio-preview {
+    display: none;
+  }
 }
 .portfolio-preview__item {
   position: absolute;
@@ -362,6 +445,13 @@ body {
   transition: all 0.2s ease-out;
   z-index: 3000;
 }
+@media (max-width: 37.5em) {
+  .portfolio-box {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    width: 22rem;
+  }
+}
 .portfolio-box .overlay {
   position: absolute;
   top: 50%;
@@ -390,6 +480,13 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
   clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 75vh);
 }
+@media (max-width: 37.5em) {
+  .header {
+    height: 75vw;
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 85vh);
+  }
+}
 .header__content {
   position: absolute;
   top: 50%;
@@ -402,12 +499,16 @@ body {
   color: #fff;
   width: 100%;
 }
+@media (max-width: 37.5em) {
+  .header__content {
+    font-size: 2rem;
+  }
+}
 .header__left {
   display: inline-block;
   animation-name: fadeInLeft;
   animation-fill-mode: backwards;
   animation-duration: 1.6s;
-  letter-spacing: 0.2rem;
 }
 .header__left:nth-child(1) {
   animation-delay: 0.9s;
@@ -441,7 +542,6 @@ body {
   animation-name: fadeInRight;
   animation-fill-mode: backwards;
   animation-duration: 1.6s;
-  letter-spacing: 0.5rem;
 }
 .header__right:nth-child(11) {
   animation-delay: 0.1s;
@@ -478,8 +578,39 @@ body {
   letter-spacing: 1.5rem;
   font-size: 1.6rem;
   margin: 1.5rem 0 4rem 0;
+  margin-left: 1rem;
+}
+@media (max-width: 37.5em) {
+  .header__sub {
+    letter-spacing: 1rem;
+  }
 }
 
+/*
+
+0px - 600px:       Phone
+601px - 900px:     Tablet portrait
+901px - 1200px:    Tablet landscape
+1201px - 1800px:   In this range normal styles are applied
+1801px ++ :        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Size calculations: browser default font size is 16px.
+Media queries are not overwritten by our setup (62.5%).
+max-width: 600px = 600px / browser's default = 600px / 16 = 37.5em
+
+Order of writing queries:
+1. Base + Typography
+2. General layout
+3. Page layout
+4. Components
+
+*/
 .footer {
   display: flex;
   justify-content: space-around;
@@ -488,13 +619,34 @@ body {
   color: #fff;
   padding: 6rem 0;
 }
+@media (max-width: 56.25em) {
+  .footer {
+    padding: 3rem 0;
+  }
+}
+@media (max-width: 37.5em) {
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .footer__nav {
   margin: 0 2rem;
+}
+@media (max-width: 37.5em) {
+  .footer__nav {
+    width: 80%;
+  }
 }
 .footer__list {
   display: flex;
   list-style: none;
   border-top: 1px solid #999;
+}
+@media (max-width: 37.5em) {
+  .footer__list {
+    justify-content: center;
+  }
 }
 .footer__item {
   margin: 1rem 1rem;
@@ -517,6 +669,11 @@ body {
 .footer__copyright {
   border-top: 1px solid #999;
   width: 50%;
+}
+@media (max-width: 37.5em) {
+  .footer__copyright {
+    width: 80%;
+  }
 }
 .footer__copyright p {
   margin-top: 1rem;
@@ -641,6 +798,12 @@ body {
   background-color: #f7f7f7;
   padding: 20rem 0 30rem 0;
   margin-top: -14rem;
+}
+@media (max-width: 37.5em) {
+  .section-about {
+    padding: 10rem 0 30rem 0;
+    margin-top: -6rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
