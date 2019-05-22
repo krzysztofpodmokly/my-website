@@ -1,26 +1,67 @@
 .projects {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     perspective: 40rem;
-    
-    
+
+    @include respond(phone) {
+        background-image: linear-gradient(to right bottom,
+                rgba($color-primary-dark, .8),
+                rgba($color-primary-light, .8)),
+            url("../../public/img/project-bcg.jpg");
+        background-size: cover;
+        height: 100%;
+    }
+
+
     &__feature {
+        height: auto; // !
+        // height: 49rem;
         flex-wrap: wrap;
         position: relative;
-        margin: 0 1rem;
+        margin: 2rem 3rem;
+        // width: 20vw;
         text-align: center;
         background: $color-bright;
         box-shadow: 0 1rem 1rem rgba($color-deep-dark, .25);
-        height: 49rem;
-        
+
         transition: all .2s ease;
         transform-style: preserve-3d;
         transform: rotateX(10deg);
 
+        @include respond(tab-port) {
+            transform: rotateX(0deg);
+        }
+
+        @include respond(phone) {
+            width: 60vw;
+            height: auto;
+        }
+
         &:hover {
             transform: rotateX(0deg);
+        }
+
+        &:nth-child(1) .projects__panel {
+            background-color: $color-primary-dark;
+        }
+
+        &:nth-child(2) .projects__panel {
+            background-color: $color-secondary-dark;
+        }
+
+        &:nth-child(3) .projects__panel {
+            background-color: $color-tertiary-dark;
+        }
+
+        &:nth-child(4) .projects__panel {
+            background-color: $color-primary-light;
+        }
+
+        &:nth-child(5) .projects__panel {
+            background-color: $color-tertiary-light;
         }
     }
 
@@ -29,7 +70,11 @@
         top: 10%;
         opacity: 0;
         visibility: hidden;
-        
+
+        @include respond(tab-port) {
+            display: none;
+        }
+
         &--live {
             margin-bottom: 2rem;
             width: 10rem;
@@ -46,43 +91,43 @@
         height: 25rem;
         width: 100%;
         background-blend-mode: screen;
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
         transition: all .3s ease;
 
         &--1 {
-            background-image: linear-gradient(to right, 
-            $color-primary-light, 
-            $color-primary-dark), 
-            url("../../img/photo-github-1.JPG");
+            background-image: linear-gradient(to right,
+                    $color-primary-light,
+                    $color-primary-dark),
+                url("../../img/photo-github-1.JPG");
         }
 
         &--2 {
-            background-image: linear-gradient(to right, 
-            $color-secondary-light, 
-            $color-secondary-dark), 
-            url("../../img/photo-github-2.JPG");
+            background-image: linear-gradient(to right,
+                    $color-secondary-light,
+                    $color-secondary-dark),
+                url("../../img/photo-github-2.JPG");
         }
 
         &--3 {
-            background-image: linear-gradient(to right, 
-            $color-tertiary-light, 
-            $color-tertiary-dark), 
-            url("../../img/photo-github-3.JPG");
+            background-image: linear-gradient(to right,
+                    $color-tertiary-light,
+                    $color-tertiary-dark),
+                url("../../img/photo-github-3.JPG");
         }
 
         &--4 {
-            background-image: linear-gradient(to right, 
-            $color-quaternary-light, 
-            $color-quaternary-dark), 
-            url("../../img/photo-github-4.JPG");
+            background-image: linear-gradient(to right,
+                    $color-quaternary-light,
+                    $color-quaternary-dark),
+                url("../../img/photo-github-4.JPG");
         }
 
         &--5 {
-            background-image: linear-gradient(to right, 
-            $color-primary-light, 
-            $color-primary-dark), 
-            url("../../img/photo-github-1.JPG");
+            background-image: linear-gradient(to right,
+                    $color-tertiary-dark,
+                    $color-tertiary-light),
+                url("../../img/photo-github-1.JPG");
         }
     }
 
@@ -104,35 +149,76 @@
         font-size: 1.4rem;
         padding: .5rem 0;
 
-
-
-        // &::before {
-        //     display: block;
-        //     content: '';
-        //     background-image: url("../../public/img/checkmark.svg");
-        //     background-size: 20px 20px;
-        //     height: 20px;
-        //     width: 20px;
-            // background:  no-repeat center;
-
-        // }
-
         &:not(:last-child) {
             border-bottom: 1px solid $color-grey-dark-2;
         }
     }
 
+    &__panel {
+        display: none;
+        position: relative;
+
+        @include respond(tab-port) {
+            height: 8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+        }
+
+        &--search {
+            margin-top: 1.3rem;
+        }
+
+        &--github {
+            margin-top: 1.3rem;
+        }
+
+        svg {
+            @include respond(tab-port) {
+                fill: $color-bright;
+                width: 4rem;
+                height: 3rem;
+                margin: 0 2rem;
+            }
+
+            @include respond(phone) {
+                width: 5rem;
+                height: 4rem;
+                margin: 0 5rem;
+            }
+        }
+    }
+
     &:hover &__feature:not(:hover) {
         transform: scale(.8) rotateX(10deg);
-        
+
+        @include respond(tab-port) {
+            transform: scale(1) rotateX(0deg);
+        }
     }
 
     &__feature:hover &__img {
         filter: grayscale(30%) brightness(40%);
+
+        @include respond(tab-port) {
+            filter: grayscale(0%) brightness(100%);
+        }
     }
 
     &__feature:hover &__link {
         opacity: 1;
         visibility: visible;
+    }
+
+    @include respond(tab-port) {
+        &__feature &__link {
+            opacity: 1;
+            visibility: visible;
+            position: absolute;
+            top: 100%;
+        }
     }
 }

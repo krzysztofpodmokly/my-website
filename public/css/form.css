@@ -202,6 +202,11 @@ body {
   z-index: -1;
   overflow: hidden;
 }
+@media (max-width: 37.5em) {
+  .bg-video {
+    display: none;
+  }
+}
 
 body {
   padding: 0 !important;

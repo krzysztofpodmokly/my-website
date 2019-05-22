@@ -107,6 +107,11 @@ body {
   z-index: -1;
   overflow: hidden;
 }
+@media (max-width: 37.5em) {
+  .bg-video {
+    display: none;
+  }
+}
 
 .btn, .btn:link, .btn:visited {
   text-decoration: none;
@@ -180,32 +185,71 @@ body {
 }
 
 .projects {
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   perspective: 40rem;
 }
+@media (max-width: 37.5em) {
+  .projects {
+    background-image: linear-gradient(to right bottom, rgba(33, 118, 255, 0.8), rgba(53, 167, 255, 0.8)), url("../../public/img/project-bcg.jpg");
+    background-size: cover;
+    height: 100%;
+  }
+}
 .projects__feature {
+  height: auto;
   flex-wrap: wrap;
   position: relative;
-  margin: 0 1rem;
+  margin: 2rem 3rem;
   text-align: center;
   background: #fff;
   box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.25);
-  height: 49rem;
   transition: all 0.2s ease;
   transform-style: preserve-3d;
   transform: rotateX(10deg);
 }
+@media (max-width: 56.25em) {
+  .projects__feature {
+    transform: rotateX(0deg);
+  }
+}
+@media (max-width: 37.5em) {
+  .projects__feature {
+    width: 60vw;
+    height: auto;
+  }
+}
 .projects__feature:hover {
   transform: rotateX(0deg);
+}
+.projects__feature:nth-child(1) .projects__panel {
+  background-color: #2176FF;
+}
+.projects__feature:nth-child(2) .projects__panel {
+  background-color: #28b485;
+}
+.projects__feature:nth-child(3) .projects__panel {
+  background-color: #ff7730;
+}
+.projects__feature:nth-child(4) .projects__panel {
+  background-color: #35A7FF;
+}
+.projects__feature:nth-child(5) .projects__panel {
+  background-color: #ffb900;
 }
 .projects__link {
   position: absolute;
   top: 10%;
   opacity: 0;
   visibility: hidden;
+}
+@media (max-width: 56.25em) {
+  .projects__link {
+    display: none;
+  }
 }
 .projects__link--live {
   margin-bottom: 2rem;
@@ -220,8 +264,8 @@ body {
   height: 25rem;
   width: 100%;
   background-blend-mode: screen;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   transition: all 0.3s ease;
 }
 .projects__img--1 {
@@ -237,7 +281,7 @@ body {
   background-image: linear-gradient(to right, #5643fa, #2998ff), url("../../img/photo-github-4.JPG");
 }
 .projects__img--5 {
-  background-image: linear-gradient(to right, #35A7FF, #2176FF), url("../../img/photo-github-1.JPG");
+  background-image: linear-gradient(to right, #ff7730, #ffb900), url("../../img/photo-github-1.JPG");
 }
 .projects__heading {
   font-size: 1.6rem;
@@ -256,15 +300,68 @@ body {
 .projects__item:not(:last-child) {
   border-bottom: 1px solid #999;
 }
+.projects__panel {
+  display: none;
+  position: relative;
+}
+@media (max-width: 56.25em) {
+  .projects__panel {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
+  }
+}
+.projects__panel--search {
+  margin-top: 1.3rem;
+}
+.projects__panel--github {
+  margin-top: 1.3rem;
+}
+@media (max-width: 56.25em) {
+  .projects__panel svg {
+    fill: #fff;
+    width: 4rem;
+    height: 3rem;
+    margin: 0 2rem;
+  }
+}
+@media (max-width: 37.5em) {
+  .projects__panel svg {
+    width: 5rem;
+    height: 4rem;
+    margin: 0 5rem;
+  }
+}
 .projects:hover .projects__feature:not(:hover) {
   transform: scale(0.8) rotateX(10deg);
+}
+@media (max-width: 56.25em) {
+  .projects:hover .projects__feature:not(:hover) {
+    transform: scale(1) rotateX(0deg);
+  }
 }
 .projects__feature:hover .projects__img {
   filter: grayscale(30%) brightness(40%);
 }
+@media (max-width: 56.25em) {
+  .projects__feature:hover .projects__img {
+    filter: grayscale(0%) brightness(100%);
+  }
+}
 .projects__feature:hover .projects__link {
   opacity: 1;
   visibility: visible;
+}
+@media (max-width: 56.25em) {
+  .projects__feature .projects__link {
+    opacity: 1;
+    visibility: visible;
+    position: absolute;
+    top: 100%;
+  }
 }
 
 /*# sourceMappingURL=projects.css.map */
