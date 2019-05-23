@@ -131,15 +131,32 @@ body {
   display: flex;
   width: 100vw;
   align-items: center;
-  position: relative;
 }
 @media (max-width: 56.25em) {
   .curriculum__box {
-    justify-content: center;
+    align-items: initial;
+  }
+}
+@media (max-width: 37.5em) {
+  .curriculum__box {
+    flex-direction: column;
   }
 }
 .curriculum__box:nth-child(2) {
-  margin: 10rem 0;
+  margin: -0.5rem 0;
+}
+@media (max-width: 56.25em) {
+  .curriculum__box:nth-child(2) {
+    margin: 0;
+  }
+}
+.curriculum__box:last-child {
+  margin-bottom: -0.5rem;
+}
+@media (max-width: 56.25em) {
+  .curriculum__box:last-child {
+    margin: 0;
+  }
 }
 .curriculum__img img {
   width: 50vw;
@@ -147,19 +164,74 @@ body {
 }
 @media (max-width: 56.25em) {
   .curriculum__img img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.2;
-    background-size: contain;
+    height: 100%;
+  }
+}
+@media (max-width: 37.5em) {
+  .curriculum__img img {
+    width: 100vw;
+  }
+}
+.curriculum__img:nth-child(2) {
+  opacity: 0.99;
+  position: relative;
+  z-index: -1;
+  margin-left: -20rem;
+}
+@media (max-width: 56.25em) {
+  .curriculum__img:nth-child(2) {
+    margin-left: 0;
+  }
+}
+@media (max-width: 37.5em) {
+  .curriculum__img:nth-child(1) {
+    order: 3;
   }
 }
 .curriculum__text {
   width: 50vw;
   display: flex;
   flex-direction: column;
-  padding: 5rem;
+  padding: 5rem 10rem 5rem 5rem;
   font-size: 1.5rem;
+  background-image: linear-gradient(75deg, #2176ff 0%, rgba(33, 118, 255, 0.8) 85%, transparent 60%);
+  color: #fff;
+}
+@media (max-width: 56.25em) {
+  .curriculum__text {
+    background-image: linear-gradient(75deg, #2176ff 0%, rgba(33, 118, 255, 0.8) 100%, transparent 100%);
+  }
+}
+@media (max-width: 37.5em) {
+  .curriculum__text {
+    width: 100vw;
+  }
+}
+.curriculum__text h2 {
+  background-image: linear-gradient(to right bottom, #ff7730, #ffb900);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.curriculum__text:not(:nth-child(1)) {
+  margin-left: -15rem;
+}
+@media (max-width: 56.25em) {
+  .curriculum__text:not(:nth-child(1)) {
+    margin-left: 0;
+  }
+}
+.curriculum__text:nth-child(1) {
+  margin-left: 20rem;
+}
+@media (max-width: 56.25em) {
+  .curriculum__text:nth-child(1) {
+    margin-left: 0;
+  }
+}
+@media (max-width: 37.5em) {
+  .curriculum__text:nth-child(3) {
+    order: -1;
+  }
 }
 .curriculum__header:nth-child(1) {
   padding-right: 3rem;

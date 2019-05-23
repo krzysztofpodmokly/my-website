@@ -7,37 +7,63 @@ body {
         display: flex;
         width: 100vw;
         align-items: center;
-        position: relative;
-
+        
         @include respond(tab-port) {
-            // flex-direction: column-reverse;
-            justify-content: center;
+            align-items: initial;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
         }
 
         &:nth-child(2) {
-            // margin: -.5rem 0;
-            margin: 10rem 0;
+            margin: -.5rem 0;
+
+            @include respond(tab-port) {
+                margin: 0;
+            }
         }
 
-        &:nth-child(3) {
-            // margin-bottom: -.5rem;
+        &:last-child {
+            margin-bottom: -.5rem;
+
+            @include respond(tab-port) {
+                margin: 0;
+            }
         }
 
     }
 
     &__img {
-
         img {
             width: 50vw;
             background-size: cover;
 
             @include respond(tab-port) {
-                position: absolute;
-                top: 0;
-                left: 0;
-                opacity: 0.2;
-                // width: 100vw;
-                background-size: contain;
+                height: 100%;
+            }
+            
+            @include respond(phone) {
+                width: 100vw;
+            }
+
+
+        }
+
+        &:nth-child(2) {
+            opacity: .99;
+            position: relative;
+            z-index: -1;
+            margin-left: -20rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
+        }
+
+        &:nth-child(1) {
+            @include respond(phone) {
+                order: 3;
             }
         }
     }
@@ -46,14 +72,58 @@ body {
         width: 50vw;
         display: flex;
         flex-direction: column;
-        padding: 5rem;
+        padding: 5rem 10rem 5rem 5rem;
         font-size: 1.5rem;
+        background-image: linear-gradient(75deg, 
+        rgba($color-primary-dark, 95) 0%,
+        rgba($color-primary-dark, .8) 85%,
+        transparent 60%
+        );
+        color: $color-bright;
 
-        // &:nth-child(1) {
-        //     @include respond(tab-port) {
-        //         order: 2;
-        //     }
-        // }
+        @include respond(tab-port) {
+            background-image: linear-gradient(75deg, 
+                rgba($color-primary-dark, 95) 0%,
+                rgba($color-primary-dark, .8) 100%,
+                transparent 100%
+            );
+        }
+
+        @include respond(phone) {
+            width: 100vw;
+        }
+
+        h2 {
+            background-image: linear-gradient(
+                to right bottom, 
+                $color-tertiary-dark, 
+                $color-tertiary-light);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        &:not(:nth-child(1)) {
+            margin-left: -15rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
+
+        }
+
+        &:nth-child(1) {
+            margin-left: 20rem;
+
+            @include respond(tab-port) {
+                margin-left: 0;
+            }
+        }
+
+        &:nth-child(3) {
+            @include respond(phone) {
+                order: -1;
+            }
+        }
     }
 
     &__header {

@@ -213,8 +213,16 @@ body {
 }
 
 .section-contact {
+  height: 100vh;
   padding: 3.5rem 4rem;
   background-image: linear-gradient(to right bottom, #2176FF, rgba(53, 167, 255, 0.6));
+}
+@media (max-width: 37.5em) {
+  .section-contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .contact {
@@ -233,6 +241,8 @@ body {
 @media (max-width: 37.5em) {
   .contact {
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.97) 0%, rgba(255, 255, 255, 0.5) 100%, transparent 50%), url("../../img/photo-3.jpg");
+    width: 100%;
+    height: 70%;
   }
 }
 .contact__form {
@@ -247,6 +257,7 @@ body {
 @media (max-width: 37.5em) {
   .contact__form h2 {
     font-size: 2.5rem;
+    width: 20rem;
   }
 }
 
