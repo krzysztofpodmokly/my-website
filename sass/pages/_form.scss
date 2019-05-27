@@ -7,12 +7,14 @@ body {
     height: 100vh;
     padding: 3.5rem 4rem;
     background-image: linear-gradient(to right bottom, $color-primary-dark, rgba($color-primary-light, .6));
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
     @include respond(phone) {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 }
 
@@ -39,9 +41,12 @@ body {
     }
 
     @include respond(phone) {
-        background-image: linear-gradient(105deg,
-            rgba($color-bright, .97) 0%,
-            rgba($color-bright, .5) 100%,
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: linear-gradient(to bottom,
+            rgba($color-bright, .8) 20%,
+            rgba($color-bright, .2) 100%,
             transparent 50%),
             url("../../img/photo-3.jpg");
             width: 100%;
