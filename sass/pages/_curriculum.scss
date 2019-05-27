@@ -74,12 +74,13 @@ body {
         flex-direction: column;
         padding: 5rem 10rem 5rem 5rem;
         font-size: 1.5rem;
-        background-image: linear-gradient(75deg, 
-        rgba($color-primary-dark, 95) 0%,
-        rgba($color-primary-dark, .8) 85%,
-        transparent 60%
-        );
+        position: relative;
         color: $color-bright;
+        background-image: linear-gradient(75deg, 
+            rgba($color-primary-dark, 100) 0%,
+            rgba($color-primary-dark, .8) 85%,
+            transparent 60%
+            );
 
         @include respond(tab-port) {
             background-image: linear-gradient(75deg, 
@@ -104,6 +105,7 @@ body {
 
         &:not(:nth-child(1)) {
             margin-left: -15rem;
+            
 
             @include respond(tab-port) {
                 margin-left: 0;
@@ -113,9 +115,36 @@ body {
 
         &:nth-child(1) {
             margin-left: 20rem;
+            
+            background-image: linear-gradient(75deg, 
+            rgba($color-primary-dark, .01) 0%,
+            rgba($color-primary-dark, .8) 85%
+            );
+            padding-right: 3rem;
+
+            &:before {
+                content: " ";
+                position: absolute;
+                display: block;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: -5rem;
+                z-index: -1;
+                background-color: rgba($color-primary-dark, .85);
+                transform: skew(-20deg, 0deg);
+
+                @include respond(tab-port) {
+                    display: none;
+                }
+            }
 
             @include respond(tab-port) {
                 margin-left: 0;
+                background-image: linear-gradient(75deg, 
+                rgba($color-primary-dark, .9) 0%,
+                rgba($color-primary-dark, .8) 85%
+                );
             }
         }
 

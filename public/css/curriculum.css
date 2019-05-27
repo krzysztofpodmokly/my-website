@@ -194,8 +194,9 @@ body {
   flex-direction: column;
   padding: 5rem 10rem 5rem 5rem;
   font-size: 1.5rem;
-  background-image: linear-gradient(75deg, #2176ff 0%, rgba(33, 118, 255, 0.8) 85%, transparent 60%);
+  position: relative;
   color: #fff;
+  background-image: linear-gradient(75deg, #2176ff 0%, rgba(33, 118, 255, 0.8) 85%, transparent 60%);
 }
 @media (max-width: 56.25em) {
   .curriculum__text {
@@ -222,10 +223,30 @@ body {
 }
 .curriculum__text:nth-child(1) {
   margin-left: 20rem;
+  background-image: linear-gradient(75deg, rgba(33, 118, 255, 0.01) 0%, rgba(33, 118, 255, 0.8) 85%);
+  padding-right: 3rem;
+}
+.curriculum__text:nth-child(1):before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -5rem;
+  z-index: -1;
+  background-color: rgba(33, 118, 255, 0.85);
+  transform: skew(-20deg, 0deg);
+}
+@media (max-width: 56.25em) {
+  .curriculum__text:nth-child(1):before {
+    display: none;
+  }
 }
 @media (max-width: 56.25em) {
   .curriculum__text:nth-child(1) {
     margin-left: 0;
+    background-image: linear-gradient(75deg, rgba(33, 118, 255, 0.9) 0%, rgba(33, 118, 255, 0.8) 85%);
   }
 }
 @media (max-width: 37.5em) {
