@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
-const config = require('config');
 const keys = require('../config/keys');
 
 const connectDB = async () => {
   try {
-    await mongoose.connect(keys.mongoURI);
+    await mongoose.connect(keys.mongoURI, { useNewUrlParser: true });
     console.log('MongoDB connected');
   } catch (error) {
     console.error(error.message);
