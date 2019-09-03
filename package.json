@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "watch:main": "sass --watch sass/main.scss public/css/style.css",
     "watch:projects": "sass --watch sass/projects.scss public/css/projects.css",
@@ -14,7 +14,8 @@
     "watch:foot": "sass --watch sass/layout/_footer.scss public/css/footer.css",
     "devserver": "live-server",
     "all": "npm-run-all --parallel watch:main watch:projects watch:form watch:error watch:nav watch:load watch:curr watch:foot",
-    "start": "nodemon app.js"
+    "dev": "nodemon app.js",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
