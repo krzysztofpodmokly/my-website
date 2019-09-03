@@ -60,6 +60,31 @@
     opacity: 0;
   }
 }
+/*
+
+0px - 600px:       Phone
+601px - 900px:     Tablet portrait
+901px - 1200px:    Tablet landscape
+1201px - 1800px:   In this range normal styles are applied
+1801px ++ :        Big desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+Size calculations: browser default font size is 16px.
+Media queries are not overwritten by our setup (62.5%).
+max-width: 600px = 600px / browser's default = 600px / 16 = 37.5em
+
+Order of writing queries:
+1. Base + Typography
+2. General layout
+3. Page layout
+4. Components
+
+*/
 .overlay {
   height: 100vh;
   width: 100vw;
@@ -84,6 +109,16 @@
   animation-duration: 1.4s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
+}
+@media (max-width: 56.25em) {
+  .loader {
+    font-size: 40px;
+  }
+}
+@media (max-width: 37.5em) {
+  .loader {
+    font-size: 30px;
+  }
 }
 
 .loader span {

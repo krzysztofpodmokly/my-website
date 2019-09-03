@@ -273,13 +273,13 @@ body {
   transition: all 0.3s ease;
 }
 .projects__img--1 {
-  background-image: linear-gradient(to right, #35A7FF, #2176FF), url("../../img/photo-github-1.JPG");
+  background-image: linear-gradient(to right, #35A7FF, #2176FF), url("../../public/img/german.JPG");
 }
 .projects__img--2 {
-  background-image: linear-gradient(to right, #7ed56f, #28b485), url("../../img/photo-github-2.JPG");
+  background-image: linear-gradient(to right, #7ed56f, #28b485), url("../../public/img/crossfitier.JPG");
 }
 .projects__img--3 {
-  background-image: linear-gradient(to right, #ffb900, #ff7730), url("../../img/photo-github-3.JPG");
+  background-image: linear-gradient(to right, #D12525, #A51C1C), url("../../public/img/searchify.JPG");
 }
 .projects__img--4 {
   background-image: linear-gradient(to right, #5643fa, #2998ff), url("../../img/photo-github-4.JPG");
