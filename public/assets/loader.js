@@ -1,5 +1,5 @@
-$(window).on('load', function () {
-    setTimeout(function () {
-        $('.preloader').fadeOut("slow")
-    }, 1000)
+$(window).on('load', function() {
+  setTimeout(function() {
+    $('.overlay').fadeOut('slow');
+  }, 1000);
 });

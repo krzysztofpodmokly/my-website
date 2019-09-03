@@ -104,35 +104,35 @@
             background-image: linear-gradient(to right,
                     $color-primary-light,
                     $color-primary-dark),
-                url("../../img/photo-github-1.JPG");
+                url("../../public/img/german.JPG");
         }
 
         &--2 {
             background-image: linear-gradient(to right,
                     $color-secondary-light,
                     $color-secondary-dark),
-                url("../../img/photo-github-2.JPG");
+                url("../../public/img/crossfitier.JPG");
         }
 
         &--3 {
             background-image: linear-gradient(to right,
-                    $color-tertiary-light,
-                    $color-tertiary-dark),
-                url("../../img/photo-github-3.JPG");
+                    $color-fifth-light,
+                    $color-fifth-dark),
+                url("../../public/img/searchify.JPG");
         }
 
         &--4 {
             background-image: linear-gradient(to right,
                     $color-quaternary-light,
                     $color-quaternary-dark),
-                url("../../img/photo-github-4.JPG");
+                url("../../public/img/photo-github-4.jpg");
         }
 
         &--5 {
             background-image: linear-gradient(to right,
                     $color-tertiary-dark,
                     $color-tertiary-light),
-                url("../../img/photo-github-1.JPG");
+                url("../../public/img/photo-github-1.jpg");
         }
     }
 
