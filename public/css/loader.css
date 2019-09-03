@@ -60,6 +60,17 @@
     opacity: 0;
   }
 }
+@keyframes fadeInLoader {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*
 
 0px - 600px:       Phone
@@ -105,25 +116,7 @@ Order of writing queries:
 }
 .loader span {
   color: #fff;
-  animation-name: fadeIn;
-  animation-duration: 1.4s;
-  animation-fill-mode: both;
-  animation-iteration-count: infinite;
-}
-@media (max-width: 56.25em) {
-  .loader {
-    font-size: 40px;
-  }
-}
-@media (max-width: 37.5em) {
-  .loader {
-    font-size: 30px;
-  }
-}
-
-.loader span {
-  color: #fff;
-  animation-name: fadeIn;
+  animation-name: fadeInLoader;
   animation-duration: 1.4s;
   animation-fill-mode: both;
   animation-iteration-count: infinite;
@@ -151,6 +144,16 @@ Order of writing queries:
 }
 .loader span:nth-child(9) {
   animation-delay: 0.8s;
+}
+@media (max-width: 56.25em) {
+  .loader {
+    font-size: 40px;
+  }
+}
+@media (max-width: 37.5em) {
+  .loader {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=loader.css.map */

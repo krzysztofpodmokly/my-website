@@ -85,6 +85,17 @@ Order of writing queries:
     opacity: 0;
   }
 }
+@keyframes fadeInLoader {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*
 
 0px - 600px:       Phone
