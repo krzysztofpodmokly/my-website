@@ -359,7 +359,7 @@ body {
   display: flex;
   justify-content: center;
   height: 90vh;
-  background-image: linear-gradient(to right bottom, rgba(33, 118, 255, 0.5), rgba(53, 167, 255, 0.5)), url("../../img/photo-2.jpg");
+  background-image: linear-gradient(to right bottom, rgba(33, 118, 255, 0.5), rgba(53, 167, 255, 0.5)), url("../../public/img/photo-2.jpg");
   -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 100%);
 }
@@ -408,35 +408,35 @@ body {
   border-radius: 3px;
 }
 .portfolio-preview__item:nth-child(1) {
-  background-image: url("../../img/photo-github-1.JPG");
+  background-image: url("../../public/img/photo-github-1.jpg");
   background-size: cover;
   width: 25rem;
   height: 15rem;
   transition: all 0.4s ease;
 }
 .portfolio-preview__item:nth-child(2) {
-  background-image: url("../../img/photo-github-2.JPG");
+  background-image: url("../../public/img/photo-github-2.jpg");
   background-size: contain;
   width: 25rem;
   height: 15rem;
   transition: all 0.4s ease 0.2s;
 }
 .portfolio-preview__item:nth-child(3) {
-  background-image: url("../../img/photo-github-3.JPG");
+  background-image: url("../../public/img/photo-github-4.jpg");
   background-size: cover;
   width: 25rem;
   height: 15rem;
   transition: all 0.4s ease 0.3s;
 }
 .portfolio-preview__item:nth-child(4) {
-  background-image: url("../../img/photo-1.jpg");
+  background-image: url("../../public/img/searchify.JPG");
   background-size: cover;
   width: 20rem;
   height: 20rem;
   transition: all 0.4s ease 0.4s;
 }
 .portfolio-preview__item:nth-child(5) {
-  background-image: url("../../img/photo-2.jpg");
+  background-image: url("../../public/img/german.JPG");
   background-size: cover;
   width: 20rem;
   height: 20rem;
