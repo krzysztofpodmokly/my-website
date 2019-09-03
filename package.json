@@ -15,7 +15,7 @@
     "devserver": "live-server",
     "all": "npm-run-all --parallel watch:main watch:projects watch:form watch:error watch:nav watch:load watch:curr watch:foot",
     "dev": "nodemon app.js",
-    "start": "cross-env NODE_ENV=production node app.js"
+    "start": "NODE_ENV=production node app.js"
   },
   "repository": {
     "type": "git",
