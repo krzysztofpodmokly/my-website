@@ -282,10 +282,10 @@ body {
   background-image: linear-gradient(to right, #D12525, #A51C1C), url("../../public/img/searchify.JPG");
 }
 .projects__img--4 {
-  background-image: linear-gradient(to right, #5643fa, #2998ff), url("../../img/photo-github-4.JPG");
+  background-image: linear-gradient(to right, #5643fa, #2998ff), url("../../public/img/photo-github-4.jpg");
 }
 .projects__img--5 {
-  background-image: linear-gradient(to right, #ff7730, #ffb900), url("../../img/photo-github-1.JPG");
+  background-image: linear-gradient(to right, #ff7730, #ffb900), url("../../public/img/photo-github-1.jpg");
 }
 .projects__heading {
   font-size: 1.6rem;
