@@ -414,16 +414,10 @@ body {
   height: 15rem;
   transition: all 0.4s ease;
 }
-.portfolio-preview__item:nth-child(2) {
-  background-image: url("../../public/img/photo-github-2.jpg");
-  background-size: contain;
-  width: 25rem;
-  height: 15rem;
-  transition: all 0.4s ease 0.2s;
-}
 .portfolio-preview__item:nth-child(3) {
-  background-image: url("../../public/img/photo-github-4.jpg");
+  background-image: url("../../public/img/crossfitier.JPG");
   background-size: cover;
+  background-position: bottom;
   width: 25rem;
   height: 15rem;
   transition: all 0.4s ease 0.3s;
